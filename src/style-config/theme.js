@@ -1,12 +1,10 @@
 export const theme = {
   colors: {
     light: '#fff',
-    text: '#2a2a2a',
-    primary: '#07c',
-    secondary: '#233387',
-    accent: '#3f51b5',
-    shadowBox: ' #088e24',
-    overlay: '#000000d4',
+    text: '#2a363b',
+    secondary: '#f5f5f5',
+    accent: '#9dcbff',
+    accentTwo: '#2196f3',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
