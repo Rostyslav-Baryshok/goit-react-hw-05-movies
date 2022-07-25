@@ -11,6 +11,7 @@ export const ReviewsList = styled.ul`
     border: 1px solid ${({ theme }) => theme.colors.accent};
     border-radius: 10px;
     background-color: ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0px 0px 5px 0px;
   }
 
   h2 {

@@ -32,9 +32,12 @@ export const MovieItem = styled.li`
   border: 1px solid ${({ theme }) => theme.colors.accent};
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.secondary};
+  box-shadow: 0px 2px 5px 0px;
+
   transition: transform 250ms ease;
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.015);
+    box-shadow: 0px 2px 1px 0px;
   }
 `;

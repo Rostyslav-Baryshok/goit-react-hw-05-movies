@@ -2,16 +2,10 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 
-const HomePage = lazy(() =>
-  import('../pages/HomePage' /*webpackChunkName: "homePage-view"*/)
-);
-const MoviesPage = lazy(() =>
-  import('../pages/MoviesPage' /*webpackChunkName: "moviesPage-view"*/)
-);
+const HomePage = lazy(() => import('../pages/HomePage'));
+const MoviesPage = lazy(() => import('../pages/MoviesPage'));
 const MovieDetailsPage = lazy(() =>
-  import(
-    '../pages/MovieDetailsPage/MovieDetailsPage' /*webpackChunkName: "movieDetailsPage-view"*/
-  )
+  import('../pages/MovieDetailsPage/MovieDetailsPage')
 );
 
 export const App = () => {

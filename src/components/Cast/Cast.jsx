@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as API from 'service/API';
 import { CastList } from './Cast.styled';
-import comingSoonImg from 'images/image-avatar.jpg';
+import avatar from 'images/image-avatar.jpg';
 
 const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/w200';
 
@@ -20,7 +20,7 @@ const Cast = () => {
         {cast.map(({ id, name, character, profile_path }) => (
           <li key={id}>
             <img
-              src={profile_path ? BASE_IMAGE_URL + profile_path : comingSoonImg}
+              src={profile_path ? BASE_IMAGE_URL + profile_path : avatar}
               alt={name}
             />
             <p>{name}</p>

@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   border-radius: 10px;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.secondary};
+  box-shadow: 0px 0px 5px 0px;
 `;
 
 export const MovieTitle = styled.h2`
@@ -67,10 +68,10 @@ export const Button = styled.button`
   border: none;
   color: ${({ theme }) => theme.colors.text};
   transition: all 250ms ease;
+  box-shadow: 0px 0px 2px 0px;
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.05);
     color: ${({ theme }) => theme.colors.accentTwo};
   }
 `;
