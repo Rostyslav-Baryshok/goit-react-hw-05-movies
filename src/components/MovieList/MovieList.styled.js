@@ -18,7 +18,7 @@ export const LinkText = styled.p`
   text-align: center;
 `;
 
-export const MoviesList = styled.ul`
+export const MovieList = styled.ul`
   display: grid;
   justify-content: center;
   grid-gap: 15px;

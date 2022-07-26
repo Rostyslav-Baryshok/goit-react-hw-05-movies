@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import MovieLinkList from '../components/MovieList/MovieList';
+import MovieList from '../components/MovieList/MovieList';
 import * as API from 'service/API';
 
 const HomePage = () => {
@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <>
       <h1>Trending today:</h1>
-      <MovieLinkList data={data} />
+      <MovieList data={data} />
     </>
   );
 };
