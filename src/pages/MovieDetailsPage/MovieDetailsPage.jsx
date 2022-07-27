@@ -1,6 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState, lazy, Suspense } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate, Outlet } from 'react-router-dom';
 import * as api from 'service/api';
 import {
   Wrapper,
@@ -16,8 +15,6 @@ import {
 } from './MovieDetailsPage.styled';
 
 import { Link } from 'components/Navigation/Navigation.styled';
-const Cast = lazy(() => import('../../components/Cast/Cast'));
-const Reviews = lazy(() => import('../../components/Reviews/Reviews'));
 
 const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/w300';
 
@@ -78,13 +75,7 @@ const MovieDetailsPage = () => {
               Reviews
             </Link>
           </ContainerLink>
-
-          <Suspense fallback={<>loading...</>}>
-            <Routes>
-              <Route path="cast" element={<Cast />} />
-              <Route path="reviews" element={<Reviews />} />
-            </Routes>
-          </Suspense>
+          <Outlet />
         </>
       )}
     </>
