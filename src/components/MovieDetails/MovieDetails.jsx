@@ -18,7 +18,7 @@ import { Link } from 'components/Navigation/Navigation.styled';
 
 const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/w300';
 
-const MovieDetailsPage = () => {
+const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
 
@@ -82,4 +82,4 @@ const MovieDetailsPage = () => {
   );
 };
 
-export default MovieDetailsPage;
+export default MovieDetails;
