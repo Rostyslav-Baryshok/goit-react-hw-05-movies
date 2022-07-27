@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState, lazy, Suspense } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import * as API from 'service/API';
+import * as api from 'service/api1';
 import {
   Wrapper,
   Title,
@@ -28,7 +28,7 @@ const MovieDetailsPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    API.getMovieDetails(movieId).then(data => setMovie(data.data));
+    api.getMovieDetails(movieId).then(data => setMovie(data.data));
   }, [movieId]);
 
   return (

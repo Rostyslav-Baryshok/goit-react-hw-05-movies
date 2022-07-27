@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as API from 'service/API';
+import * as api from 'service/api1';
 import { CastList } from './Cast.styled';
 import avatar from 'images/image-avatar.jpg';
 
@@ -11,7 +11,7 @@ const Cast = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    API.getMovieCredits(movieId).then(data => setCast(data.data.cast));
+    api.getMovieCredits(movieId).then(data => setCast(data.data.cast));
   }, [movieId]);
 
   return (

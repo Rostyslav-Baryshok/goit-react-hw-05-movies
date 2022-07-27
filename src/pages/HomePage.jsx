@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import MovieList from '../components/MovieList/MovieList';
-import * as API from 'service/API';
+import * as api from 'service/api1';
 
 const HomePage = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    API.getMoviesTrending()
+    api
+      .getMoviesTrending()
       .then(data => {
         return data.data.results;
       })

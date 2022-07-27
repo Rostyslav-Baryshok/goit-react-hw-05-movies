@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as API from 'service/API';
+import * as api from 'service/api1';
 import { ReviewsList } from './Reviews.styled';
 
 const Reviews = () => {
@@ -9,7 +9,7 @@ const Reviews = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    API.getMovieReviews(movieId).then(data => setReview(data.data.results));
+    api.getMovieReviews(movieId).then(data => setReview(data.data.results));
   }, [movieId]);
 
   return review && review.length ? (
