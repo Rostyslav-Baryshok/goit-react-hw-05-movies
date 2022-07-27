@@ -14,7 +14,7 @@ import {
   Button,
 } from './MovieDetails.styled';
 
-import { Link } from 'components/Navigation/Navigation.styled';
+import { Link } from 'Layout/AppBar/AppBar.styled';
 
 const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/w300';
 

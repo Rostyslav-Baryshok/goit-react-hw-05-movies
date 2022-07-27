@@ -1,10 +1,12 @@
-import { Container } from './AppBar.styled';
-import { Navigation } from 'components/Navigation/Navigation';
+import { Container, Link } from './AppBar.styled';
 
 export const AppBar = () => {
   return (
     <Container>
-      <Navigation />
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/movies">Movies</Link>
+      </nav>
     </Container>
   );
 };
