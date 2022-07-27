@@ -7,7 +7,7 @@ import { Layout } from 'components/Layout/Layout';
 const HomePage = lazy(() => import('pages/HomePage'));
 const MoviesPage = lazy(() => import('pages/MoviesPage'));
 const MoviesDetailsPage = lazy(() =>
-  import('pages/MovieDetailsPage/MovieDetailsPage')
+  import('components/MovieDetails/MovieDetails')
 );
 const Cast = lazy(() => import('./components/Cast/Cast'));
 const Reviews = lazy(() => import('./components/Reviews/Reviews'));

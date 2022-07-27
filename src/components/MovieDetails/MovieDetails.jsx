@@ -12,7 +12,7 @@ import {
   MovieTitle,
   MovieImage,
   Button,
-} from './MovieDetailsPage.styled';
+} from './MovieDetails.styled';
 
 import { Link } from 'components/Navigation/Navigation.styled';
 

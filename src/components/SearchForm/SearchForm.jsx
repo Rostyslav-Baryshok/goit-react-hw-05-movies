@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Button } from 'pages/MovieDetailsPage/MovieDetailsPage.styled';
+import { Button } from 'components/MovieDetails/MovieDetails.styled';
 import { Form, Input } from './SearchForm.styled';
 
 import { toast } from 'react-toastify';
