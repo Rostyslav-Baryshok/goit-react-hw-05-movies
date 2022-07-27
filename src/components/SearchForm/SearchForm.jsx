@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from 'components/MovieDetails/MovieDetails.styled';
-import { Form, Input } from './SearchForm.styled';
+
+import { FormStyle, FieldStyle } from './SearchForm.styled';
+import { Formik } from 'formik';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,14 +39,16 @@ export const SearchForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Input
-        type="text"
-        value={query}
-        placeholder="Search movies"
-        onChange={handleStateChange}
-      />
-      <Button type="submit">Search</Button>
-    </Form>
+    <Formik>
+      <FormStyle onSubmit={handleSubmit}>
+        <FieldStyle
+          type="text"
+          value={query}
+          placeholder="Search movies"
+          onChange={handleStateChange}
+        />
+        <Button type="submit">Search</Button>
+      </FormStyle>
+    </Formik>
   );
 };
