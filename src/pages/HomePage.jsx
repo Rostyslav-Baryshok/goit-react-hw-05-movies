@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import MovieList from '../components/MovieList/MovieList';
-import * as api from 'service/api1';
+import * as api from 'service/api';
 
 const HomePage = () => {
   const [data, setData] = useState(null);

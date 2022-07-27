@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState, lazy, Suspense } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import * as api from 'service/api1';
+import * as api from 'service/api';
 import {
   Wrapper,
   Title,

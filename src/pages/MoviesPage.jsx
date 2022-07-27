@@ -2,7 +2,7 @@ import { SearchForm } from 'components/SearchForm/SearchForm';
 import MovieList from 'components/MovieList/MovieList';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import * as api from 'service/api1';
+import * as api from 'service/api';
 
 const MoviesPage = () => {
   const [data, setData] = useState(null);

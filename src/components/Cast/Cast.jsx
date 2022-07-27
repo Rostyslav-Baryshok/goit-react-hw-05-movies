@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as api from 'service/api1';
+import * as api from 'service/api';
 import { CastList } from './Cast.styled';
 import avatar from 'images/image-avatar.jpg';
 
