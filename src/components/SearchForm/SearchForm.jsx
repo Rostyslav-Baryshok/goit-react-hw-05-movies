@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import { Button } from 'components/MovieDetails/MovieDetails.styled';
 
 import { FormStyle, FieldStyle } from './SearchForm.styled';
@@ -8,40 +7,29 @@ import { Formik } from 'formik';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const initialValues = {
+  name: '',
+};
+
 export const SearchForm = () => {
   const [query, setQuery] = useState('');
-
-  const navigate = useNavigate();
-
-  const { pathname, search } = useLocation();
-
-  useEffect(() => {
-    const searchQuery = search.slice(8);
-    if (!searchQuery) {
-      return;
-    }
-
-    setQuery(searchQuery);
-  }, [search]);
 
   const handleStateChange = e => {
     setQuery(e.currentTarget.value.toLowerCase());
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-
+  const handleSubmit = resetForm => {
     if (query.trim() === '') {
       return toast.warn('Please insert valid request!');
     }
-
-    navigate(`${pathname}?search=${query}`);
+    resetForm();
   };
 
   return (
-    <Formik>
+    <Formik initialValues={initialValues}>
       <FormStyle onSubmit={handleSubmit}>
         <FieldStyle
+          name="name"
           type="text"
           value={query}
           placeholder="Search movies"
