@@ -2,7 +2,7 @@ import { GlobalStyle } from 'style-config/GlobalStyle';
 
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Layout } from 'components/Layout/Layout';
+import { Layout } from 'Layout/Layout';
 
 const HomePage = lazy(() => import('pages/HomePage'));
 const MoviesPage = lazy(() => import('pages/MoviesPage'));
