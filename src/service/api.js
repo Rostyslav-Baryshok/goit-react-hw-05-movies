@@ -1,4 +1,7 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { BASE_URL, API_KEY } from 'constans/movies-api';
 
 async function getMoviesWithErrorHandling(url) {
@@ -6,7 +9,7 @@ async function getMoviesWithErrorHandling(url) {
     const response = await axios.get(url);
     return response;
   } catch (error) {
-    return new Error('Not found');
+    return toast.error('Not found');
   }
 }
 
